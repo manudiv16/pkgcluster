@@ -138,9 +138,7 @@ func (d *DNSStrategy) syncNodes(ctx context.Context, state State, discovered []s
 //   - "cluster_domain" (string) — Kubernetes cluster domain (default: "cluster.local")
 //
 // Node addresses are formatted as <fqdn>:<port> (port comes from the SRV record).
-type DNSSRVStrategy struct {
-	state State
-}
+type DNSSRVStrategy struct{}
 
 // NewDNSSRVStrategy is an alias for NewKubernetesDNSSRVStrategy.
 func NewDNSSRVStrategy(s State) (Strategy, error) { return NewKubernetesDNSSRVStrategy(s) }
