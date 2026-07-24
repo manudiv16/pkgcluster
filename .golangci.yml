@@ -1,0 +1,8 @@
+version: "2"
+linters:
+  settings:
+    errcheck:
+      exclude-functions:
+        - (*net.conn).Close
+        - (*golang.org/x/net/ipv4.PacketConn).Close
+        - (io.ReadCloser).Close
